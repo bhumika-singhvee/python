@@ -1,0 +1,32 @@
+from datetime import date
+import os
+import pywhatkit
+
+
+a = input("Enter what you want to do: ")
+
+if( a == '1'):
+    today = date.today()
+    print("Current date:", today)
+
+
+elif(a=='2'):
+    directory = "Bhumi"
+    parent_dir = "C:/Users/User/Desktop"
+    path = os.path.join(parent_dir, directory)
+try:
+    os.makedirs(path, exist_ok = True)
+    print("Directory '%s' created successfully" % directory)
+    except OSError as error:
+    print("Directory '%s' can not be created" % directory)
+
+elif(a=='3'):
+
+  pywhatkit.sendwhatmsg("+91 8107056574", "Tera account ho gya",16,55)
+
+elif(a=='4'):
+#    print(os.path.splitext(path))
+     path = "C:/Users/User/Desktop"
+     entries = os.listdir('C:/Users/User/Desktop')
+     os.listdir('C:/Users/User/Desktop/')
+     print(entries)
